@@ -3,24 +3,19 @@ using UnityEngine.UI;
 
 public class FindError : MonoBehaviour
 {
-    public Button button; 
-    SceneConfig sceneConfig;
+    [SerializeField] Button button;
+    [SerializeField] SceneConfig sceneConfig;
+    [SerializeField] Image image;
 
-    [SerializeField] Image imagemDoBotao;
-    
     [Header("Configurações de Áudio")]
     AudioSource audioSource;
     [SerializeField] AudioClip somDoClique;
 
-    public void OnClick()
+    public void Find()
     {
         button.interactable = false;    
         sceneConfig.AdicionarPonto();
-
-        Color corAtual = imagemDoBotao.color;
-        corAtual.a = 1f;
-        imagemDoBotao.color = corAtual;
-
+        image.color = Color.white;
 
         if (audioSource != null && somDoClique != null)
         {
