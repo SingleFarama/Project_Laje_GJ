@@ -37,7 +37,7 @@ public class SceneConfig : MonoBehaviour
 
     private void WinScreen()
     {
-        winScreen.Show();
+        winScreen.ShowVictoryScreen();
     }
 
 #region BONEQUINHO
