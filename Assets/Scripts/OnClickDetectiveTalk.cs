@@ -13,7 +13,7 @@ public class OnClickDetectiveTalk : MonoBehaviour
         // TextUI = frases[indiceFraseAtual]
 
         // próxima frase (se possível)
-        if (indiceFraseAtual <= quantidade_frases)
+        if (indiceFraseAtual < quantidade_frases)
         {
             indiceFraseAtual++; // índice da próxima frase
         }
