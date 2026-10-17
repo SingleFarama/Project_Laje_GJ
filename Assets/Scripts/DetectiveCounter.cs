@@ -23,10 +23,4 @@ public class DetectiveCounter : MonoBehaviour
         // talvez colocar um texto final quando acabar o tempo
         // textoUI.text = "Vamos!"
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

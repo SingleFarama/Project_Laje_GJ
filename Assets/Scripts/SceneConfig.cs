@@ -3,10 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneConfig : MonoBehaviour
 {
-    WinScreen winScreen;
+    [SerializeField] HideScreen hideScreenVictory;
+    [SerializeField] HideScreen hideScreenGeral;
+    [SerializeField] HideScreen hideScreenButtons;
 
-    private int pontos;
-    private int CenaAtual;
+    private int pontos;    
+    public int currentScene;
 
     public void AdicionarPonto()
     {
@@ -20,7 +22,7 @@ public class SceneConfig : MonoBehaviour
         
         // pegando qual é a cena atual para usarmos essa informação depois
         Scene cenaAtual = SceneManager.GetActiveScene();
-        CenaAtual = cenaAtual.buildIndex;
+        currentScene = cenaAtual.buildIndex;
     }
 
     private void Update()
@@ -28,53 +30,10 @@ public class SceneConfig : MonoBehaviour
         // ponto onde a fase termina
         if (pontos >= 7)
         {
+            hideScreenGeral.HideScreenTrue();
+            hideScreenButtons.HideScreenTrue();
             // cutscene de vitória
-            StartCutscene();
+            hideScreenVictory.ShowScreen();
         }
     }
-
-    private void StartCutscene() // cutscene de vitória
-    {
-
-        CharacterTalk();
-        WinScreen();
-    }
-
-    private void WinScreen()
-    {
-        winScreen.ShowVictoryScreen();
-    }
-
-#region BONEQUINHO
-
-    private void CharacterTalk()
-    {
-        if (CenaAtual == 1)
-        {
-            
-        } if (CenaAtual == 2)
-        {
-            
-        } if (CenaAtual == 3)
-        {
-            
-        } if (CenaAtual == 4)
-        {
-            
-        } if (CenaAtual == 5)
-        {
-            
-        } if (CenaAtual == 6)
-        {
-            
-        } if (CenaAtual == 7)
-        {
-            
-        } else
-        {
-            
-        }
-        
-    }
-#endregion
 }

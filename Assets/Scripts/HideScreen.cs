@@ -1,20 +1,10 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class WinScreen : MonoBehaviour
+public class HideScreen : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroupVictory; 
 
-    private void Start()
-    {
-        if (canvasGroupVictory != null)
-        {
-            HideVictoryScreen();
-        }
-    }
-
-    public void ShowVictoryScreen()
+    public void ShowScreen()
     {
         if (canvasGroupVictory != null)
         {
@@ -24,7 +14,7 @@ public class WinScreen : MonoBehaviour
         }
     }
 
-    private void HideVictoryScreen()
+    public void HideScreenTrue()
     {
         if (canvasGroupVictory != null)
         {
