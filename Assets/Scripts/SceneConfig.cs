@@ -10,27 +10,32 @@ public class SceneConfig : MonoBehaviour
 
     public void AdicionarPonto()
     {
+        // aumentando pontuação
         pontos++;
     }
 
     private void Start()
     {
         pontos = 0;
-
+        
+        // pegando qual é a cena atual para usarmos essa informação depois
         Scene cenaAtual = SceneManager.GetActiveScene();
         CenaAtual = cenaAtual.buildIndex;
     }
 
     private void Update()
     {
+        // ponto onde a fase termina
         if (pontos >= 7)
         {
+            // cutscene de vitória
             StartCutscene();
         }
     }
 
-    private void StartCutscene()
+    private void StartCutscene() // cutscene de vitória
     {
+
         CharacterTalk();
         WinScreen();
     }
