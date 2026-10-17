@@ -1,22 +1,36 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
-    SceneConfig sceneConfig;
+    [SerializeField] CanvasGroup canvasGroupVictory; 
 
-    [SerializeField] Image imagemDoBotao;
-    
     private void Start()
     {
-        Color corAtual = imagemDoBotao.color;
-        corAtual.a = 0f;
-        imagemDoBotao.color = corAtual;
+        if (canvasGroupVictory != null)
+        {
+            HideVictoryScreen();
+        }
     }
 
-    public void Show()
+    public void ShowVictoryScreen()
     {
-        
+        if (canvasGroupVictory != null)
+        {
+            canvasGroupVictory.alpha = 0.8f;    
+            canvasGroupVictory.interactable = true;  
+            canvasGroupVictory.blocksRaycasts = true; 
+        }
     }
 
+    private void HideVictoryScreen()
+    {
+        if (canvasGroupVictory != null)
+        {
+            canvasGroupVictory.alpha = 0f;
+            canvasGroupVictory.interactable = false;
+            canvasGroupVictory.blocksRaycasts = false;
+        }
+    }
 }
