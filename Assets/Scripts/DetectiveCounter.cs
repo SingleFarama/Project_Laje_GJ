@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class DetectiveCounter : MonoBehaviour
 {   
-    public float tempoRestante = 10f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        StartCoroutine(Contador());
-    }
-    IEnumerator Contador()
+    private float tempoRestante = 10f;
+
+    public IEnumerator Contador()
     {
         while (tempoRestante > 0f)
         {
