@@ -55,13 +55,14 @@ public class OnClickDetectiveTalk : MonoBehaviour
         hideScreen.ShowScreen();
 
         textMeshProUGUI.text = frases[0];
+        indiceFraseAtual++;
     }
 
     #region DETETIVE
 
     private void CharacterWords()
     {
-        if (sceneConfig.currentScene <= 1)
+        if (sceneConfig.currentScene <= 2)
         {
             falaInicial = "Se prepare...";
             frases = new[] { "Vamos encontrar os erros juntos!", 
