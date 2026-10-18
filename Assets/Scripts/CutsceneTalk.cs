@@ -9,7 +9,7 @@ public class CutsceneTalk : MonoBehaviour
     [SerializeField] SceneConfig sceneConfig;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
     [SerializeField] AudioSource AudioSource;
-    [SerializeField] public AudioClip somMudancaFrase;
+    [SerializeField] AudioClip somMudancaFrase;
 
     private string[] frases;
     private string proximaCena;

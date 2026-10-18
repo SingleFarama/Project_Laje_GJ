@@ -9,7 +9,7 @@ public class FindError : MonoBehaviour
 
     [Header("Configurações de Áudio")]
     AudioSource audioSource;
-    [SerializeField] AudioClip somDoClique;
+    [SerializeField] AudioClip SomDeAcerto;
 
     public void Find()
     {
@@ -17,9 +17,9 @@ public class FindError : MonoBehaviour
         sceneConfig.AdicionarPonto();
         image.color = Color.white;
 
-        if (audioSource != null && somDoClique != null)
+        if (audioSource != null && SomDeAcerto != null)
         {
-            audioSource.PlayOneShot(somDoClique);
+            audioSource.PlayOneShot(SomDeAcerto);
         }
     }
 }

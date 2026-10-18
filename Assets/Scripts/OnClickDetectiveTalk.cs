@@ -10,6 +10,10 @@ public class OnClickDetectiveTalk : MonoBehaviour
     [SerializeField] Button button;
     [SerializeField] MudarImagem mudarImagem;
     [SerializeField] HideScreen hideScreen;
+    [SerializeField] AudioSource AudioSource;
+    [SerializeField] private AudioClip toque1Relogio;
+    [SerializeField] private AudioClip toque2Relogio;
+    [SerializeField] public AudioClip somMudancaFrase;
 
     private string[] frases; 
     private string falaInicial;
@@ -43,8 +47,17 @@ public class OnClickDetectiveTalk : MonoBehaviour
         textMeshProUGUI.text = falaInicial;
         yield return new WaitForSeconds(1.5f);
 
+        AudioSource.PlayOneShot(somMudancaFrase);
+
         for (int i = 7; i > 0; i--)
         {
+            if ((i % 2) == 0)
+            {
+                AudioSource.PlayOneShot(toque1Relogio);
+            } else
+            {
+                AudioSource.PlayOneShot(toque2Relogio);
+            }
             textMeshProUGUI.text = i.ToString(); 
             yield return new WaitForSeconds(1f);
         }
