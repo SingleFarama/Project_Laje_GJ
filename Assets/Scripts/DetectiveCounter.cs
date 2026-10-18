@@ -15,7 +15,7 @@ public class DetectiveCounter : MonoBehaviour
         {   
             // efeitos sonoros
             // efeito sonoro
-            if ((i % 2) == 0)
+            if ((tempoRestante % 2) == 0)
             {
                 AudioSource.PlayOneShot(toque1Relogio);
             } else
