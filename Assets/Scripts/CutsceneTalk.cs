@@ -8,6 +8,8 @@ public class CutsceneTalk : MonoBehaviour
     // variáveis para o inspetor do unity
     [SerializeField] SceneConfig sceneConfig;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
+    [SerializeField] AudioSource AudioSource;
+    [SerializeField] public AudioClip somMudancaFrase;
 
     private string[] frases;
     private string proximaCena;
@@ -46,6 +48,8 @@ public class CutsceneTalk : MonoBehaviour
         }
         for (int i = 0; i < frases.Length; i++) // loop para mostrar as frases na tela
         {
+            AudioSource.PlayOneShot(somMudancaFrase);
+
             // mudando o texto
             textMeshProUGUI.text = frases[i];
             
