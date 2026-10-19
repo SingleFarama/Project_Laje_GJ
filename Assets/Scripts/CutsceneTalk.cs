@@ -20,10 +20,10 @@ public class CutsceneTalk : MonoBehaviour
         
 
         // definindo as frases de acordo com a cena
-        if (sceneConfig.currentScene == 1) // cutscene do início
+        if (sceneConfig.currentScene == 2) // cutscene do início
         {
             frases = new [] {
-                "Olá! Meu nome é Detetive",
+                "Olá! Meu nome é Miro! Sou um Detetive.",
                 "Tenho um desafio pra você",
                 "Vou te mostrar uma imagem...", 
                 "e você precisará memorizar todos os elementos dela",
@@ -32,7 +32,7 @@ public class CutsceneTalk : MonoBehaviour
                 "Será que você consegue?!"
             };
             proximaCena = "Level_1";
-        } else if (sceneConfig.currentScene == 3) // cutscene do final
+        } else if (sceneConfig.currentScene == 10) // cutscene do final
         {
             frases = new[]
             {
@@ -42,6 +42,7 @@ public class CutsceneTalk : MonoBehaviour
                 "Por favor...",
                 "Não deixe de jogar esse jogo..."
             };
+            yield return new WaitForSeconds(2f); // esperar por 5 segundos
             proximaCena = "StartScene";
         }
         for (int i = 0; i < frases.Length; i++) // loop para mostrar as frases na tela

@@ -8,7 +8,7 @@ public class HideScreen : MonoBehaviour
     {
         if (canvasGroupVictory != null)
         {
-            canvasGroupVictory.alpha = 0.8f;    
+            canvasGroupVictory.alpha = 1f;    
             canvasGroupVictory.interactable = true;  
             canvasGroupVictory.blocksRaycasts = true; 
         }
