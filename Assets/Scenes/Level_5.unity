@@ -735,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 257}
+  m_AnchoredPosition: {x: 0, y: 257}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &254994074
@@ -755,9 +755,7 @@ MonoBehaviour:
   button: {fileID: 254994075}
   mudarImagem: {fileID: 314755958}
   hideScreen: {fileID: 295481030}
-  AudioSource: {fileID: 337043071}
-  toque1Relogio: {fileID: 8300000, guid: 4d0a036393324e840b827b887bbb2cf5, type: 3}
-  toque2Relogio: {fileID: 8300000, guid: 4d0a036393324e840b827b887bbb2cf5, type: 3}
+  audioSource: {fileID: 337043071}
   somMudancaFrase: {fileID: 8300000, guid: 4d0a036393324e840b827b887bbb2cf5, type: 3}
 --- !u!114 &254994075
 MonoBehaviour:
@@ -2872,8 +2870,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneTalk
   sceneConfig: {fileID: 1405678696}
   textMeshProUGUI: {fileID: 1405678698}
-  audioSource: {fileID: 0}
-  somMudancaFrase: {fileID: 0}
 --- !u!114 &1405678698
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class OnClickDetectiveTalk : MonoBehaviour
     [SerializeField] Button button;
     [SerializeField] MudarImagem mudarImagem;
     [SerializeField] HideScreen hideScreen;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip somMudancaFrase;
 
     private string[] frases; 
     private string falaInicial;
@@ -33,7 +35,7 @@ public class OnClickDetectiveTalk : MonoBehaviour
 
         textMeshProUGUI.text = frases[indiceFraseAtual];
         indiceFraseAtual++; // índice da próxima frase
-        AudioSource.PlayOneShot(somMudancaFrase);
+        audioSource.PlayOneShot(somMudancaFrase);
         
         if (indiceFraseAtual >= quantidade_frases)
         {

@@ -8,7 +8,7 @@ public class FindError : MonoBehaviour
     [SerializeField] Image image;
 
     [Header("Configurações de Áudio")]
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip somDoClique;
 
     public void Find()
